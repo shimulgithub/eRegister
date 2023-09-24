@@ -11,22 +11,21 @@ import jakarta.persistence.Id;
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long studentId;
+    private Long id;
+	
 	private String studentNumber;
     private String firstName;
     private String middleName;
     private String lastName;
     private Double cgpa;
     private LocalDate enrollmentDate;
-    private String isInternational; 
+    private boolean isInternational; 
     
-    public Long getStudentId() 
-    {
-		return studentId;
+    public Long getId() {
+		return id;
 	}
-	public void setStudentId(Long studentId) 
-	{
-		this.studentId = studentId;
+	public void setId(Long id) {
+		this.id = id;
 	}
 	public String getStudentNumber() 
 	{
@@ -76,11 +75,11 @@ public class Student {
 	{
 		this.enrollmentDate = enrollmentDate;
 	}
-	public String getIsInternational()
+	public boolean getIsInternational()
 	{
 		return isInternational;
 	}
-	public void setIsInternational(String isInternational)
+	public void setIsInternational(boolean isInternational)
 	{
 		this.isInternational = isInternational;
 	}
